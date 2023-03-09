@@ -47,7 +47,7 @@ const undo = ()=>{
       {/* main components starts from here */}
       <main className=''>
         <section className='grid grid-cols-12 gap-4 py-4'>
-          <div className='col-span-3 mx-auto  w-full'>
+          <div className='lg:col-span-3 col-span-12 mx-auto  w-full'>
           
             {data.map(dt=><div role={'button'} onClickCapture={()=>selectId(dt.id)} key={dt.id} className='flex justify-between items-center border-[2px] px-2.5 py-2 border-gray-400 '>
             <h4>{change ? dt.name: dt.name}</h4>
@@ -61,7 +61,7 @@ const undo = ()=>{
 
 
 
-            <div className='col-span-6 mx-auto w-5/6 border-[2px]  border-gray-400'>
+            <div className='lg:col-span-6 col-span-12 mx-auto w-5/6 border-[2px]  border-gray-400'>
             <div className=' w-full'>
               <div className='p-4'>
                 <h2 className='text-2xl  text-gray-700 font-semibold'>{data[select.id].name} </h2>
@@ -92,7 +92,7 @@ const undo = ()=>{
           </div>
         
 
-          <form onSubmit={undo} className='col-span-3 mx-auto border-[2px] border-gray-400 w-full p-4 max-h-96'>
+          <form onSubmit={undo} className='lg:col-span-3 col-span-12 mx-auto border-[2px] border-gray-400 w-full p-4 max-h-96'>
             <button className='bg-blue-600 text-white p-2 font-medium rounded'>Open New Form</button>
               <div className='py-3 flex flex-col'>
                 <label className='py-1 font-medium text-gray-700'>Cat Name</label>
@@ -126,10 +126,10 @@ const undo = ()=>{
         <div className='h-[1.5px] w-auto bg-gray-400 mb-4'></div>
           <section>
           <h2 className='text-3xl pb-3 text-gray-700 font-semibold'>Cats image gallery</h2>
-            <div className='grid grid-cols-12 gap-14 py-4'>
+            <div className='grid grid-cols-12 lg:gap-14 gap-y-3 sm:gap-10 py-4'>
 
            {data.map(d=>
-            <div role={'button'} onClick={()=>selectId(d.id)} key={d.id} className='col-span-3 border-[2px]  border-gray-400'>
+            <div role={'button'} onClick={()=>selectId(d.id)} key={d.id} className='lg:col-span-3 sm:col-span-6 col-span-12 border-[2px] mx-auto border-gray-400'>
             <div className=' w-full'>
               <div className='p-4'>
                 <h2 className='text-2xl  text-gray-700 font-semibold'>{d.name} </h2>
